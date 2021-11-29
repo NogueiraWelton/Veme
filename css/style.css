@@ -78,7 +78,12 @@ section {
   background-size: cover;
 }
 #header {
-  background-image: linear-gradient(to bottom, var(--black), transparent);
+  background-image: linear-gradient(
+    to bottom,
+    var(--black),
+    var(--black),
+    var(--black) transparent
+  );
   padding: 3rem;
   display: flex;
   align-items: center;
@@ -197,6 +202,11 @@ section {
   margin: 1.5rem 0;
   font-size: 0.9rem;
 }
+.sub-subtitle {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 2rem;
+}
 #separator img {
   width: 100vw;
   -webkit-user-drag: none;
@@ -288,8 +298,97 @@ section {
 .presentation-btn:hover > .flags-container > svg > .flag {
   stroke: #d3d3d3;
 }
-.teste {
-  height: 100vh;
+#menu {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  font-family: var(--sec-font);
+  padding: 3rem;
+}
+#menu .sub-subtitle {
+  margin-bottom: 1rem;
+}
+#menu ul li {
+  margin-bottom: 0.5rem;
+}
+#skew {
+  margin: 0 auto;
+}
+.menu-title {
+  grid-column: 7;
+  margin-bottom: 2rem;
+}
+.meat {
+  grid-column: 1/7;
+}
+.vegan {
+  grid-column: 9/12;
+}
+.follow-up {
+  margin-bottom: 2rem;
+  grid-row: 2;
+}
+.drinks,
+.follow-up {
+  grid-column: 7;
+}
+#about {
+  font-family: var(--sec-font);
+  background-color: rgb(248, 247, 247);
+  color: rgb(0, 0, 0);
+  padding: 3rem;
+}
+#about p {
+  margin: 1rem 0 1rem 0;
+  line-height: 1.5rem;
+}
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  padding: 3rem;
+}
+#contact .subtitle {
+  margin-bottom: 2rem;
+}
+.data-container {
+  display: flex;
+  gap: 20vw;
+  margin-top: 2rem;
+}
+.data-container span {
+  font-weight: bold;
+}
+.data-container p {
+  font-family: var(--sec-font);
+  margin-bottom: 1rem;
+}
+.wpp-btn {
+  color: var(--white);
+  font-family: var(--sec-font);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  background-color: #222;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.social-icon {
+  cursor: pointer;
+  margin-right: 1rem;
+}
+#footer {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--sec-font);
+  text-align: center;
+  padding: 1rem;
 }
 @media (max-width: 1024px) {
   .slide {
@@ -312,7 +411,13 @@ section {
     width: 50vw;
     display: none;
     z-index: 100;
-    background-color: #000;
+    background-image: linear-gradient(
+      to top,
+      var(--black),
+      var(--black),
+      var(--black),
+      transparent
+    );
     padding: 2rem 0 1rem 0;
     margin-top: -2rem;
     right: 0;
@@ -382,6 +487,16 @@ section {
   }
   .arrow {
     width: 1.5rem;
+  }
+  .meat,
+  .vegan,
+  .drinks,
+  .follow-up {
+    grid-column: 7;
+    padding: 1rem 0;
+  }
+  .follow-up {
+    margin: 0;
   }
 }
 @media (max-width: 550px) {
