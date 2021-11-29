@@ -28,4 +28,19 @@ const slideImages = {
   },
 };
 
+const HamburguerMenu = {
+  menu: document.querySelector("#nav-menu"),
+
+  toggleClass() {
+    document.querySelector("#hamburguer-menu").classList.toggle("active");
+    document.querySelector("#nav-menu").classList.toggle("active");
+  },
+  changePosition() {
+    HamburguerMenu.menu.style.top = `${
+      document.querySelector("#header").getBoundingClientRect().height
+    }px`;
+  },
+};
+
 window.addEventListener("load", slideImages.start);
+window.addEventListener("resize", HamburguerMenu.changePosition);

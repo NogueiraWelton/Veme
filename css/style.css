@@ -126,15 +126,25 @@ section {
 }
 #hamburguer-menu {
   display: none;
-  flex-direction: column;
-  gap: 6px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 }
 .menu-slice {
-  width: 28px;
+  display: block;
+  width: 100%;
   height: 4px;
   background-color: var(--white);
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
 }
+
 #intro {
   color: var(--white);
   text-align: center;
@@ -278,6 +288,9 @@ section {
 .presentation-btn:hover > .flags-container > svg > .flag {
   stroke: #d3d3d3;
 }
+.teste {
+  height: 100vh;
+}
 @media (max-width: 1024px) {
   .slide {
     gap: 2.5rem;
@@ -292,11 +305,69 @@ section {
   }
 }
 @media (max-width: 767px) {
+  #header {
+    position: relative;
+  }
   #nav-menu {
+    width: 50vw;
     display: none;
+    z-index: 100;
+    background-color: #000;
+    padding: 2rem 0 1rem 0;
+    margin-top: -2rem;
+    right: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  #nav-menu li::after {
+    display: none;
+  }
+  #nav-menu li {
+    border-bottom: 1px solid #d3d3d3;
+  }
+  #nav-menu li:last-child {
+    border: none;
+  }
+  #nav-menu li a {
+    display: block;
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+  #nav-menu.active {
+    display: block;
+    position: absolute;
+    top: 165.23px;
+    visibility: visible;
+    opacity: 1;
   }
   #hamburguer-menu {
     display: flex;
+    position: relative;
+  }
+  #hamburguer-menu.active > .menu-slice {
+    position: absolute;
+  }
+  #hamburguer-menu.active > .menu-slice:nth-of-type(1) {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+  #hamburguer-menu.active > .menu-slice:nth-of-type(2) {
+    opacity: 0;
+  }
+  #hamburguer-menu.active > .menu-slice:nth-of-type(3) {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
   }
   .slide {
     gap: 2rem;

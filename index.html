@@ -22,15 +22,15 @@
       <nav id="menu-container">
         <ul id="nav-menu">
           <li><a href="">HOME</a></li>
-          <li><a href="">CARDÁPIO</a></li>
+          <li><a href="#menu">CARDÁPIO</a></li>
           <li><a href="">CONTATO</a></li>
           <li><a href="">SOBRE</a></li>
         </ul>
-        <div id="hamburguer-menu">
+        <i onclick="HamburguerMenu.toggleClass()" id="hamburguer-menu">
           <div class="menu-slice"></div>
           <div class="menu-slice"></div>
           <div class="menu-slice"></div>
-        </div>
+        </i>
       </nav>
     </header>
     <main id="container">
@@ -74,6 +74,9 @@
         </svg>
       </div>
     </div>
+  </section>
+  <section id="menu">
+    <div class="teste"></div>
   </section>
   </main>
 </body>
