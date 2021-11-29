@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="./js/script.js"></script>
+  <title>VEME | Espetinhos Gourmet</title>
+</head>
+
+<body>
+  <div id="background-container">
+    <header id="header">
+      <div id="header-logo">
+        <a href=""><img src="./assets/utils/logo.svg" alt="Logo Veme"></a>
+      </div>
+      <nav id="menu-container">
+        <ul id="nav-menu">
+          <li><a href="">HOME</a></li>
+          <li><a href="">CARDÁPIO</a></li>
+          <li><a href="">CONTATO</a></li>
+          <li><a href="">SOBRE</a></li>
+        </ul>
+        <div id="hamburguer-menu">
+          <div class="menu-slice"></div>
+          <div class="menu-slice"></div>
+          <div class="menu-slice"></div>
+        </div>
+      </nav>
+    </header>
+    <main id="container">
+      <section id="intro">
+        <div id="intro-content">
+          <h1 class="title">Espetinhos Gourmet</h1>
+          <p class="desc">Espetinhos ao seu gosto feitos especialmente para você!</p>
+          <a class="button intro-btn" href="">ABRIR CARDÁPIO</a>
+          <p class="info">Clique e venha conhecer nossas opções.</p>
+        </div>
+      </section>
+      <div id="separator">
+        <img src="./assets/utils/separator.svg" alt="Separador">
+      </div>
+  </div>
+  <section id="presentation">
+    <div id="presentation-content"></div>
+    <div class="stars">
+      <img src="./assets/icons/stars.svg" alt="Estrelas">
+    </div>
+    <h2 class="subtitle">Alguma Coisa ai</h2>
+    <p class="desc">Textinho chamativo grande aleatório falando sobre os espetinhos
+      e a variade só pra encher linguiça</p>
+    <div class="slide">
+      <img class="arrow" onclick="slideImages.previousImage()" src="./assets/icons/left-arrow.svg" alt="">
+      <div class="slide-container">
+        <img class="slide-image selected" src="./assets/img/comum.jpg" alt="">
+        <img class="slide-image" src="./assets/img/misto.jpg" alt="">
+        <img class="slide-image" src="./assets/img/vegetais.jpg" alt="">
+      </div>
+      <img class="arrow" onclick="slideImages.nextImage()" src="./assets/icons/right-arrow.svg" alt="">
+    </div>
+    <div class="presentation-btn-container">
+      <a class="button presentation-btn" href="">VER MAIS</a>
+      <div class="flags-container">
+        <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="flag" d="M2 12.3404V2H20V29L11 19.8085L2 29V19.8085V12.3404Z" stroke="white" stroke-width="3" />
+        </svg>
+        <svg width="22" height="33" viewBox="0 0 22 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path class="flag" d="M2 12.3404V2H20V29L11 19.8085L2 29V19.8085V12.3404Z" stroke="white" stroke-width="3" />
+        </svg>
+      </div>
+    </div>
+  </section>
+  </main>
+</body>
+
+</html>

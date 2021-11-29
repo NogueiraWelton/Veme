@@ -1,0 +1,364 @@
+:root {
+  --main-font: "Scheherazade New", serif;
+  --sec-font: "Poppins", sans-serif;
+  --white: #fff;
+  --black: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-weight: normal;
+  text-decoration: none;
+  outline: none;
+  resize: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+section {
+  padding: 0 1.5rem;
+}
+
+#background-container {
+  background-image: url("../assets/img/background.png");
+  background-size: cover;
+}
+#header {
+  background-image: linear-gradient(to bottom, var(--black), transparent);
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header-logo {
+  display: inline-block;
+  width: 14rem;
+}
+#menu-container {
+  padding-left: 3rem;
+}
+#nav-menu {
+  display: flex;
+  gap: 1rem;
+}
+#nav-menu li::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  display: inline-block;
+  background-color: var(--white);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin-left: 1rem;
+}
+#nav-menu li:last-child::after {
+  display: none;
+}
+#nav-menu li a {
+  font-family: var(--main-font);
+  font-weight: bold;
+  color: var(--white);
+  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  -moz-transition: color 0.3s ease;
+  -ms-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+}
+#nav-menu li a:hover {
+  color: #d3d3d3;
+}
+#hamburguer-menu {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+.menu-slice {
+  width: 28px;
+  height: 4px;
+  background-color: var(--white);
+}
+#intro {
+  color: var(--white);
+  text-align: center;
+  height: calc(100vh - 165.23px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  font-size: 6rem;
+  font-family: var(--main-font);
+  font-weight: bold;
+}
+.desc,
+.button,
+.info {
+  font-family: var(--sec-font);
+}
+.desc {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+  line-height: 2rem;
+}
+.button {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 0.9rem;
+  display: inline-block;
+  border: 3px solid var(--white);
+  border-radius: 0 10px 0 10px;
+  -webkit-border-radius: 0 10px 0 10px;
+  -moz-border-radius: 0 10px 0 10px;
+  -ms-border-radius: 0 10px 0 10px;
+  -o-border-radius: 0 10px 0 10px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.button:hover {
+  color: #d3d3d3;
+  border-color: #d3d3d3;
+}
+.intro-btn {
+  margin-top: 3rem;
+  padding: 1.2rem 2rem;
+}
+.info {
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+#separator img {
+  width: 100vw;
+  -webkit-user-drag: none;
+}
+#presentation {
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#presentation-content {
+  width: min-content;
+}
+.subtitle {
+  font-family: var(--main-font);
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.slide {
+  display: flex;
+  gap: 5rem;
+  margin: 1rem 0;
+  align-items: center;
+}
+.arrow {
+  width: min-content;
+  height: min-content;
+  cursor: pointer;
+}
+.slide-container {
+  position: relative;
+  max-width: 720px;
+  height: auto;
+  width: 720px;
+  height: 480px;
+  border: 2px solid var(--white);
+  border-radius: 0 10px 0 10px;
+  -webkit-border-radius: 0 10px 0 10px;
+  -moz-border-radius: 0 10px 0 10px;
+  -ms-border-radius: 0 10px 0 10px;
+  -o-border-radius: 0 10px 0 10px;
+  overflow: hidden;
+}
+.slide-image {
+  user-select: none;
+  -webkit-user-drag: none;
+  opacity: 0;
+  visibility: hidden;
+  max-width: none;
+  position: absolute;
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+.slide-image.selected {
+  opacity: 1;
+  visibility: visible;
+}
+.slide-image.selected:hover {
+  transform: scale(110%);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
+}
+.flags-container {
+  display: flex;
+  margin: -2px 10px 10px;
+  justify-content: space-between;
+}
+.flag {
+  -webkit-user-drag: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.presentation-btn {
+  padding: 1.2rem 3rem;
+}
+.presentation-btn:hover > .flags-container > svg > .flag {
+  stroke: #d3d3d3;
+}
+@media (max-width: 1024px) {
+  .slide {
+    gap: 2.5rem;
+  }
+  .slide-container {
+    width: 480px;
+    height: 360px;
+  }
+  .slide-image {
+    width: 480px;
+    height: 360px;
+  }
+}
+@media (max-width: 767px) {
+  #nav-menu {
+    display: none;
+  }
+  #hamburguer-menu {
+    display: flex;
+  }
+  .slide {
+    gap: 2rem;
+  }
+  .slide-container {
+    width: 360px;
+    height: 240px;
+  }
+  .slide-image {
+    width: 360px;
+    height: 240px;
+  }
+  .arrow {
+    width: 1.5rem;
+  }
+}
+@media (max-width: 550px) {
+  .title {
+    font-size: 4rem;
+  }
+  .subtitle {
+    font-size: 2rem;
+  }
+  .desc {
+    font-size: 1.1rem;
+  }
+  .arrow {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  #intro {
+    height: 50vh;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.75rem;
+  }
+  .desc {
+    font-size: 1rem;
+  }
+  .intro-btn {
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+  }
+  #presentation {
+    height: 75vh;
+  }
+  .presentation-btn {
+    padding: 1rem 2rem;
+  }
+  .info {
+    font-size: 0.8rem;
+  }
+  .slide-container {
+    width: 240px;
+    height: 160px;
+  }
+  .slide-image {
+    width: 240px;
+    height: 160px;
+  }
+}
