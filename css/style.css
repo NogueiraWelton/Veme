@@ -314,6 +314,9 @@ section {
   }
 }
 @media (max-width: 550px) {
+  #header-logo {
+    width: 50%;
+  }
   .title {
     font-size: 4rem;
   }
@@ -335,7 +338,7 @@ section {
     font-size: 3rem;
   }
   .subtitle {
-    font-size: 1.75rem;
+    font-size: 2rem;
   }
   .desc {
     font-size: 1rem;
