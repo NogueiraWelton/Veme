@@ -314,6 +314,9 @@ section {
   }
 }
 @media (max-width: 550px) {
+  #header {
+    padding: 1.5rem;
+  }
   #header-logo {
     width: 50%;
   }
