@@ -82,7 +82,8 @@ section {
     to bottom,
     var(--black),
     var(--black),
-    var(--black) transparent
+    var(--black),
+    transparent
   );
   padding: 3rem;
   display: flex;
@@ -151,6 +152,7 @@ section {
 }
 
 #intro {
+  position: relative;
   color: var(--white);
   text-align: center;
   height: calc(100vh - 165.23px);
@@ -206,6 +208,15 @@ section {
   font-family: var(--main-font);
   font-weight: bold;
   font-size: 2rem;
+}
+.social-icons {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  bottom: 2rem;
+  right: 0;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 #separator img {
   width: 100vw;
@@ -337,10 +348,53 @@ section {
   background-color: rgb(248, 247, 247);
   color: rgb(0, 0, 0);
   padding: 3rem;
+  display: flex;
+  gap: 10rem;
+}
+#about-container {
+  max-width: 40vw;
 }
 #about p {
   margin: 1rem 0 1rem 0;
   line-height: 1.5rem;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.location-container {
+  width: 720px;
+  border: 2px solid var(--black);
+  overflow: hidden;
+  border-radius: 0 10px 0 10px;
+  -webkit-border-radius: 0 10px 0 10px;
+  -moz-border-radius: 0 10px 0 10px;
+  -ms-border-radius: 0 10px 0 10px;
+  -o-border-radius: 0 10px 0 10px;
+}
+.location-container img {
+  transition: all 0.6s;
+  -webkit-transition: all 0.6s;
+  -moz-transition: all 0.6s;
+  -ms-transition: all 0.6s;
+  -o-transition: all 0.6s;
+}
+.location-container img:hover {
+  transform: scale(110%);
+  -webkit-transform: scale(110%);
+  -moz-transform: scale(110%);
+  -ms-transform: scale(110%);
+  -o-transform: scale(110%);
+}
+.location-btn {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  background-color: var(--black);
+  padding: 1rem;
+  margin-top: -1.75rem;
+  z-index: 100;
 }
 #contact {
   display: flex;
