@@ -33,6 +33,7 @@ const HamburguerMenu = {
 
   toggleClass() {
     document.querySelector("#hamburguer-menu").classList.toggle("active");
+    HamburguerMenu.changePosition();
     document.querySelector("#nav-menu").classList.toggle("active");
   },
   changePosition() {

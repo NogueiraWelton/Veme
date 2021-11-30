@@ -310,6 +310,7 @@ section {
   stroke: #d3d3d3;
 }
 #menu {
+  height: 100vh;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(13, 1fr);
@@ -364,7 +365,7 @@ section {
   align-items: center;
 }
 .location-container {
-  width: 720px;
+  max-width: 720px;
   border: 2px solid var(--black);
   overflow: hidden;
   border-radius: 0 10px 0 10px;
@@ -443,6 +444,15 @@ section {
   font-family: var(--sec-font);
   text-align: center;
   padding: 1rem;
+}
+@media (max-width: 1350px) {
+  #about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  #about-container {
+    max-width: 100%;
+  }
 }
 @media (max-width: 1024px) {
   .slide {
@@ -571,6 +581,12 @@ section {
   }
   .arrow {
     display: none;
+  }
+  .social-icons {
+    bottom: 0;
+  }
+  .social-icons i svg {
+    width: 2rem;
   }
 }
 @media (max-width: 375px) {
